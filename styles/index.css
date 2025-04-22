@@ -1,6 +1,6 @@
 :root {
-    --header-height: 10vh;
-    --main-height: 80vh;
+    --header-height: 6vh;
+    --main-height: 84vh;
     --footer-height: 10vh;
 }
 
@@ -79,6 +79,28 @@ html {
 
 /* mobile */
 
+.header {
+    height: var(--header-height);
+    display: flex;
+    justify-content: end;
+    padding: 0.8rem;
+}
+
+.header__list {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    list-style: none;
+    gap: 1.2rem;
+}
+
+.header__container-img {
+    height: 2rem;
+    width: 2rem;
+}
+
+
+
 
 .login {
     height: var(--main-height);
@@ -118,6 +140,10 @@ html {
     width: 100%;column-gap: 0.8rem;
 }
 
+.login-form__group-search:hover {
+    box-shadow: 0 0.1rem 0.8rem 0 rgb(200, 200, 200);
+
+}
 
 .login-form__input-search {
     border: 0 solid transparent;
@@ -160,5 +186,9 @@ html {
     
     .text--light-sm {
         font-size: 1.4rem;
+    }
+
+    .header {
+        padding: 2rem;
     }
 }
