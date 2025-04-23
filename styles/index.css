@@ -67,6 +67,7 @@ html {
     width: 2rem;
     border: 0 solid transparent;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .button--lg {
@@ -74,6 +75,7 @@ html {
     height: 2rem;
     border: transparent;
     background-color: rgb(250, 250, 250);
+    cursor: pointer;
 }
 
 
@@ -164,10 +166,58 @@ html {
 
 
 
+.footer {
+    height: var(--footer-height);
+    background-color: rgb(250, 250, 250);
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, fit-content);
+    place-items: center;
+}
+
+
+.footer__line {
+    grid-area: 2 / 1 / 3 / 3;
+    width: 100%;
+    height: 0.1rem;
+    background-color: rgb(200, 200, 200);
+    border: transparent;
+}
+
+
+.footer__list-language {
+    justify-self: start;
+    grid-area: 1 / 1 / 2 / 2;
+    margin-left: 2rem;
+}
+
+.footer__list-info {
+    justify-self: start;
+    grid-area: 3 / 1 / 4 / 2;
+    margin-left: 2rem;
+}
+
+
+.footer__list-data {
+    justify-self: end;
+    grid-area: 3 / 2 / 4 / 3;
+    margin-right: 2rem;
+}
+
+.list--links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.login-languages {
+    display: flex;
+    gap: 0.8rem;
+}
+
 
 @media screen and (min-width: 40rem) {
     .login {
-        grid-template-rows: 50% repeat(2, min-content);
+        grid-template-rows: 36% repeat(2, min-content);
     }
 
     .login-figure {
@@ -175,7 +225,7 @@ html {
     }
     
     .login-form__group-search {
-        height: 4rem;
+        height: 4.8rem;
         width: 70%;
     }
 
